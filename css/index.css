@@ -1,1 +1,230 @@
-/* Compile your LESS file! */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwJYtWqZPBQ.ttf) format('truetype');
+}
+/*Variables*/
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  color: #4682B4;
+  font-family: 'Raleway', sans-serif;
+}
+html,
+body {
+  width: 100%;
+}
+body {
+  padding: 0% 2%;
+  background: snow;
+}
+h3 {
+  font-size: 1.5rem;
+}
+header {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  font-size: 5rem;
+  padding: 2%;
+  font-family: 'Raleway', sans-serif;
+}
+header .leftHeader {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 10%;
+  padding-bottom: 5%;
+  background: #FFA07A;
+}
+header .leftHeader h1 {
+  font-size: 4rem;
+  margin-top: 10%;
+  margin-right: 20%;
+}
+header .leftHeader h3 {
+  font-size: 2rem;
+  margin-top: 2%;
+  margin-right: 20%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+header .leftHeader p {
+  font-size: 1.5rem;
+  margin-top: 2%;
+  margin-right: 15%;
+}
+header .contact {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-size: 2rem;
+  margin-top: 7%;
+  margin-left: 18%;
+  align-content: space-around;
+}
+header .contact #phone {
+  margin-top: 4%;
+}
+header .contact #email {
+  margin-top: 4%;
+}
+header .contact #portfolio {
+  margin-top: 4%;
+  font-weight: bold;
+}
+header #topRight {
+  display: flex;
+  width: 50%;
+}
+header #topRight {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+header #topRight nav {
+  display: flex;
+  height: 45%;
+}
+header #topRight nav a {
+  justify-content: space-around;
+  margin: 0% 20%;
+  text-decoration: none;
+}
+.dot {
+  display: inline;
+  height: 250px;
+  width: 250px;
+  background-color: #4682B4;
+  border-radius: 50%;
+  position: relative;
+  left: -40%;
+  top: 40%;
+}
+.dot2 {
+  height: 100px;
+  width: 100px;
+  background-color: #4682B4;
+  border-radius: 50%;
+  position: relative;
+  left: -20%;
+  top: 20%;
+}
+.dot3 {
+  height: 50px;
+  width: 50px;
+  background-color: #4682B4;
+  border-radius: 50%;
+  position: relative;
+  left: -30%;
+  top: 50%;
+  background: #FFA07A;
+}
+.dot4 {
+  height: 80px;
+  width: 80px;
+  background-color: #4682B4;
+  border-radius: 50%;
+  position: relative;
+  left: -30%;
+  top: 70%;
+  background: #4682B4;
+}
+#bottomSection {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media (max-width: 600px) {
+  #bottomSection {
+    flex-direction: column;
+  }
+}
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  flex-direction: column;
+}
+.info .leftTwo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 50%;
+  width: 30%;
+}
+.info .leftTwo .personalSkills {
+  padding-left: 2%;
+  padding-bottom: 25%;
+}
+.info .leftTwo .personalSkills p {
+  font-size: 1rem;
+  margin: 9% 0;
+}
+.info .leftTwo .languages {
+  padding-left: 2%;
+  padding-top: 25%;
+}
+.info .leftTwo .languages p {
+  font-size: 1rem;
+  margin: 9% 0;
+}
+.info .leftTwo .technicalLanguages {
+  display: flex;
+  display-flex: nowrap;
+  text-align: center;
+  width: 100%;
+  padding-top: 40%;
+}
+.info .leftTwo .technicalLanguages h3 {
+  padding-left: 10%;
+}
+.info .leftTwo .technicalLanguages .smallLanguages {
+  width: 50%;
+}
+.groupLanguages {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.groupLanguages .smallLanguages {
+  font-size: 2rem;
+  width: 50%;
+}
+.groupLanguages .smallLanguages p {
+  margin: 9% 0;
+}
+.interests p {
+  font-size: 1rem;
+  margin: 5% 0;
+  width: 50%;
+}
+.experience {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  flex-direction: column;
+}
+.experience .fullExp {
+  font-size: 1.7rem;
+}
+.experience .fullExp .indivExp {
+  margin-top: 8%;
+}
+.experience .fullExp .indivExp h4,
+.experience .fullExp .indivExp p {
+  font-size: 1.5rem;
+  margin: 2% 0;
+}

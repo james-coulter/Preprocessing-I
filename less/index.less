@@ -1,59 +1,273 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+/*Variables*/ 
+@fontColor: #4682B4;
+@backgroundColor: #FFA07A;
+@fontFamily: 'Raleway', sans-serif;
+
+
+* {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
+	font-size: 62.5%;
+	box-sizing: border-box;
+	//border: @borderColor;
+	color: @fontColor;
+	font-family: @fontFamily;
 }
 
 html, body {
-    height: 100%;
+	
+	// display: flex;
+	// flex-wrap: wrap;
+	width: 100%;
 }
 
+body {
+	padding: 0% 2%;
+	background: snow;
+}
+
+h3 {
+	font-size: 1.5rem;			
+}
+
+header {
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+	//border: @borderColor;
+	font-size: 5rem;
+	padding: 2%;
+	font-family: @fontFamily;
+
+	.leftHeader {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		width: 100%;
+		padding-left: 10%;
+		padding-bottom: 5%;
+		background: @backgroundColor;
+
+		h1 {
+			font-size: 4rem;
+			margin-top: 10%;
+			margin-right: 20%;
+			
+		}
+
+		h3 {
+			font-size: 2rem;
+			margin-top: 2%;
+			margin-right: 20%;
+			margin-bottom: 5%;
+			text-align: center;
+		} //ends h3
+		p {
+			font-size: 1.5rem;
+			margin-top: 2%;
+			margin-right: 15%;
+
+
+		} //ends p
+	} //ends leftHeader
+
+	.contact {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		font-size: 2rem;
+		margin-top: 7%;
+		margin-left: 18%;
+		align-content: space-around;
+
+		#phone {
+			margin-top: 4%;
+		}//end phone
+
+		#email {
+			margin-top: 4%;
+		}//end email
+
+		#portfolio {
+			margin-top: 4%;
+			font-weight: bold;
+		}//end portfolio
+	}//end contact
+	#topRight {
+		display: flex;
+		width: 50%;
+	}
+
+	#topRight {
+		display: flex;
+		width: 100%;
+		justify-content: space-around;
+
+		nav {
+			display: flex;
+			height: 45%;
+			a {
+				justify-content: space-around;
+				margin: 0% 20%;
+				text-decoration: none;
+		}
+
+
+	}
+	}
+}//header
+
+.dot {
+	display: inline;
+	height: 250px;
+	width: 250px;
+	background-color: @fontColor;
+	border-radius: 50%;
+	position: relative;
+	left: -40%;
+	top: 40%;
+}
+
+.dot2 {
+	height: 100px;
+	width: 100px;
+	background-color: @fontColor;
+	border-radius: 50%;
+	position: relative;
+	left: -20%;
+	top: 20%;
+}
+
+.dot3 {
+	height: 50px;
+	width: 50px;
+	background-color: @fontColor;
+	border-radius: 50%;
+	position: relative;
+	left: -30%;
+	top: 50%;
+	background: @backgroundColor;
+}
+
+.dot4 {
+	height: 80px;
+	width: 80px;
+	background-color: @fontColor;
+	border-radius: 50%;
+	position: relative;
+	left: -30%;
+	top: 70%;
+	background: @fontColor;
+}
+
+#bottomSection {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+
+	@media (max-width: 600px) {
+		flex-direction: column;
+	}
+
+
+}//end first section
+
+.info {
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	flex-direction: column;
+
+
+	.leftTwo {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		height: 50%;
+		width: 30%;
+
+		.personalSkills {
+			padding-left: 2%;
+			padding-bottom: 25%;
+
+			p {
+				font-size: 1rem;
+				margin: 9% 0;
+			}
+		}//personal skills
+		.languages {
+			padding-left: 2%;
+			padding-top: 25%;
+			
+			p{
+				font-size: 1rem;
+				margin: 9% 0;
+			}
+		}
+
+		.technicalLanguages {
+			display: flex;
+			display-flex: nowrap;
+			text-align: center;
+			width: 100%;
+			padding-top: 40%;
+
+			h3 {
+				padding-left: 10%;
+			}
+
+			.smallLanguages {
+				width:50%;
+			}
+		}
+	}//left two
+}//end info
+
+
+
+.groupLanguages {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+
+	.smallLanguages {
+		font-size: 2rem;
+		width: 50%;
+
+
+		p {
+			margin: 9% 0;
+		}
+	}
+}
+
+ .interests p{
+	font-size: 1rem;
+	margin: 5% 0;
+	width: 50%;
+}
+
+.experience {
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+
+	flex-direction: column;
+
+	.fullExp {
+
+		font-size: 1.7rem;;
+		.indivExp {
+
+			margin-top: 8%;
+
+			h4, p {
+				font-size: 1.5rem;
+				margin: 2% 0;
+			}
+		}
+
+	}
+}//end info
